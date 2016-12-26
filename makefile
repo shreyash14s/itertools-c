@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -I.
 
 ODIR=obj
+dummy_build_folder := $(shell mkdir -p $(ODIR))
 
 _OBJ = main.o itertools.o ll.o
 OBJ = $(patsubst %, $(ODIR)/%, $(_OBJ))
